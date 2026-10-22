@@ -11,94 +11,94 @@ typedef ScriptOnInputAction = {
 	 * This is usually 1 for buttons and 0-1 for analogue inputs.
 	 * This is not present for mouse movement.
 	**/
-	var ?value:Float;
+	var value:Float;
 
 	/**
 	 * If the input was pressed this frame.
 	 * This is not present for mouse movement.
 	**/
-	var ?pressed:Bool;
+	var pressed:Bool;
 
 	/**
 	 * If the input was released this frame.
 	 * This is not present for mouse movement.
 	**/
-	var ?released:Bool;
+	var released:Bool;
 
 	/**
 	 * If the input was repeated this frame.
 	 * This is similar to how a key on a keyboard is repeated when you hold it down.
 	 * This is not present for mouse movement.
 	**/
-	var ?repeated:Bool;
+	var repeated:Bool;
 
 	/**
 	 * The x value of a pointer device, if present.
 	**/
-	var ?x:Float;
+	var x:Float;
 
 	/**
 	 * The y value of a pointer device, if present.
 	**/
-	var ?y:Float;
+	var y:Float;
 
 	/**
 	 * The screen space x value of a pointer device, if present.
 	**/
 	@:native('screen_x')
-	var ?screenX:Float;
+	var screenX:Float;
 
 	/**
 	 * The screen space y value of a pointer device, if present.
 	**/
 	@:native('screen_y')
-	var ?screenY:Float;
+	var screenY:Float;
 
 	/**
 	 * The change in x value of a pointer device, if present.
 	**/
-	var ?dx:Float;
+	var dx:Float;
 
 	/**
 	 * The change in y value of a pointer device, if present.
 	**/
-	var ?dy:Float;
+	var dy:Float;
 
 	/**
 	 * The change in screen space x value of a pointer device, if present.
 	**/
 	@:native('screen_dx')
-	var ?screenDx:Float;
+	var screenDx:Float;
 
 	/**
 	 * The change in screen space y value of a pointer device, if present.
 	**/
 	@:native('screen_dy')
-	var ?screenDy:Float;
+	var screenDy:Float;
 
 	/**
 	 * List of touch input, one element per finger, if present.
 	**/
-	var ?touch:LuaArray<ScriptOnInputActionTouch>;
+	var touch:LuaArray<ScriptOnInputActionTouch>;
 
 	/**
 	 * The index of the gamepad device that provided the input.
 	**/
-	var ?gamepad:Int;
+	var gamepad:Int;
 
 	/**
 	 * The name of the gamepad that was connected.
 	 * Available on the `gamepad_connected` input event.
 	**/
 	@:native('gamepad_name')
-	var ?gamepadName:String;
+	var gamepadName:String;
 
 	/**
 	 * Indicates that the connected gamepad is unidentified and will only generate raw input.
 	 * Available on the `gamepad_connected` input event.
 	**/
 	@:native('gamepad_unknown')
-	var ?gamepadUnknown:Bool;
+	var gamepadUnknown:Bool;
 }
 
 /** *
